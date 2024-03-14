@@ -1,0 +1,101 @@
+:root {
+  --primary-color: #ffc300;
+  --secondary-color: tomato;
+  --tertiary-color: blue;
+  --background-color: #f9f9f9;
+  --darkgray-color: #444444;
+  --lightgray-color: #e5e5e5;
+  --white-color: #ffffff;
+
+  --fz-big: 8rem;
+  --fz-middle: 4rem;
+  --fz-small: 1.4rem;
+}
+
+.fp-watermark {
+  display: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+.inner {
+  position: relative;
+  max-width: 144rem;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.bzf {
+  position: relative;
+  display: block;
+  color: #fff;
+  font-size: 12rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.025em;
+  text-indent: -16px;
+  margin: 4rem 0;
+  color: transparent;
+  background: #000;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  text-shadow: 1px 3px 3px rgba(255, 255, 255, 0.3);
+  /* -webkit-text-stroke: 0.4px rgba(0, 0, 0, 0.2); */
+
+  border-bottom: 1px solid #ddd;
+}
+
+.bzf i {
+  font-size: 14rem;
+}
+
+.bzf em {
+  display: block;
+  padding: 40px 80px 40px 40px;
+}
+.bzf em::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto auto 50%;
+  width: calc(100% + 30px);
+  height: 1px;
+  background: rgba(0, 0, 0, 0.5);
+  transform: translate(-50%, 0);
+}
+
+.bzf em::after {
+  content: "";
+  position: absolute;
+  inset: auto auto 0 50%;
+  width: calc(100% + 30px);
+  height: 1px;
+  background: rgba(0, 0, 0, 0.5);
+  transform: translate(-50%, 0);
+}
+
+.bzf::before {
+  content: "";
+  position: absolute;
+  inset: 50% auto auto 0;
+  height: calc(100% + 30px);
+  width: 1px;
+  background: rgba(0, 0, 0, 0.5);
+  transform: translate(0, -50%);
+}
+
+.bzf::after {
+  content: "";
+  position: absolute;
+  inset: 50% 0 auto auto;
+  height: calc(100% + 30px);
+  width: 1px;
+  background: rgba(0, 0, 0, 0.5);
+  transform: translate(0, -50%);
+}

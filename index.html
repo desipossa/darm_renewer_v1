@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2024 lee's portfolio</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/fonts.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.2.1/hamburgers.min.css">
+
+    <!-- swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Draggable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/MotionPathPlugin.min.js"></script>
+
+    <!-- lenis -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.39/dist/lenis.min.js"></script>
+
+    <!-- fullpage v4 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.22/fullpage.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.22/fullpage.css">
+
+    <!-- custom -->
+    <script src="./js/custom.js?ver=1.0" defer></script>
+    <link rel="stylesheet" href="./css/style.css?ver=1.0">
+</head>
+
+<body>
+    <div id="Wrapper" class="Wrapper">
+        <header id="header" class="header">
+            <div class="header_content">
+                <div class="inner">
+                    <h1 class="logo">
+                        <a href="/">
+                            <img src="./images/logo_t.png" alt="">
+                        </a>
+                    </h1>
+                    <nav class="gnb">
+                        <ul>
+                            <li><a href="">homepage</a></li>
+                            <li><a href="">portfolio</a></li>
+                            <li><a href="">about</a></li>
+                            <li><a href="">수정요청 / 제작문의</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="header_utils">
+                <div class="inner">
+                    <div class="right">
+                        부산홈페이지제작 다름 051-783-2317
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main role="main" id="content" class="main">
+            <section id="mainSlogan">
+                <div class="inner">
+                    <div class="m_txt_slide swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide itm">
+                                <div class="txt_area">
+                                    <strong class="ani-itm">UI/UX 디자인</strong>
+                                    <h2 class="bzf ani-itm">
+                                        <em>Imagination <i>상상</i></em>
+                                    </h2>
+                                    <p class="ani-itm">조금 더 다르게 생각하고<br /> 조금 더 합리적이게 실행합니다.</p>
+                                    <span class="ani-itm">Think a little differently and execute a little more
+                                        rationally.</span>
+                                </div>
+                                <div class="img_area ani-itm">
+                                    <figure class="bzf">
+                                        <em></em>
+                                        <img src="./images/darm_main01.jpg" alt="">
+                                    </figure>
+                                </div>
+                            </div>
+                            <div class="swiper-slide itm">
+                                <div class="txt_area">
+                                    <strong class="ani-itm">UI/UX 디자인</strong>
+                                    <h2 class="bzf ani-itm">
+                                        <em>Connect <i>소통</i></em>
+                                    </h2>
+                                    <p class="ani-itm">조금 더 다르게 생각하고<br /> 조금 더 합리적이게 실행합니다.</p>
+                                    <span class="ani-itm">Think a little differently and execute a little more
+                                        rationally.</span>
+                                </div>
+                                <div class="img_area ani-itm">
+                                    <figure class="bzf">
+                                        <em></em>
+                                        <img src="./images/darm_main02.jpg" alt="">
+                                    </figure>
+                                </div>
+                            </div>
+                            <div class="swiper-slide itm">
+                                <div class="txt_area">
+                                    <strong class="ani-itm">UI/UX 디자인</strong>
+                                    <h2 class="bzf ani-itm">
+                                        <em>Passion <i>열정</i></em>
+                                    </h2>
+                                    <p class="ani-itm">조금 더 다르게 생각하고<br /> 조금 더 합리적이게 실행합니다.</p>
+                                    <span class="ani-itm">Think a little differently and execute a little more
+                                        rationally.</span>
+                                </div>
+                                <div class="img_area ani-itm">
+                                    <figure class="bzf">
+                                        <em></em>
+                                        <img src="./images/darm_main03.jpg" alt="">
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="time_area">
+                        <div class="clock">
+                            <span class="hour">hour</span>
+                            <span class="minuite">minuite</span>
+                            <span class="second">second</span>
+                        </div>
+                    </div>
+                    <!-- <div class="txt_area">
+                        <strong>UI/UX 디자인</strong>
+                        <h2 class="bzf ">Passion</h2>
+                        <span>모바일에서의 사용자접점과 경험을 적용한 웹사이트를 제공합니다.</span>
+                        <p>The website applied with user interaction and experiences<br />
+                            in the mobile is provided.</p>
+                    </div>
+                    <div class="txt_area">
+                        <strong>UI/UX 디자인</strong>
+                        <h2 class="bzf ">Passion</h2>
+                        <span>모바일에서의 사용자접점과 경험을 적용한 웹사이트를 제공합니다.</span>
+                        <p>The website applied with user interaction and experiences<br />
+                            in the mobile is provided.</p>
+                    </div> -->
+                </div>
+            </section>
+            <section id="mainVisual">
+                <div class="time_area">
+                    <div class="clock">
+                        <span class="hour">hour</span>
+                        <span class="minuite">minuite</span>
+                        <span class="second">second</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer id="footer" class="footer">
+
+        </footer>
+    </div>
+</body>
+
+</html>
