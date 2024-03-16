@@ -1,8 +1,10 @@
 (function () {
     //mainSloganTimeLine();
     mainTxtSLide();
+    mainResSlide();
     setInterval(watch, 1000);
     mainSloganTimeLine();
+    mainVisualTimeLine();
     smoothScroll();
 })();
 
@@ -67,6 +69,10 @@ function mainTxtSLide() {
     const sl = new Swiper('.m_txt_slide', {
         loop: true,
         speed: 1800,
+        slidesPerView: 3,
+        slidesOffsetAfter: 200,
+        edgeSwipeThreshold: 100,
+        //direction: 'vertical',
         effect: "cube",
         grabCursor: true,
         cubeEffect: {
@@ -77,7 +83,7 @@ function mainTxtSLide() {
         },
         centeredSlides: true,
         autoplay: {
-            delay: 10000,
+            delay: 4000,
             disableOnInteraction: false,
         },
         on: {
@@ -90,15 +96,36 @@ function mainTxtSLide() {
                 mainVisualSlideTimeline(itms, this.realIndex, slideNumber);
             },
         }
-    })
+    });
+
+    function slideTab() {
+        const btn = document.querySelectorAll('#mainSlogan .slide_link button');
+
+        btn.forEach((it, idx) => {
+            it.addEventListener('click', () => {
+                sl.slideToLoop(idx)
+            })
+        })
+    }
+
+    slideTab();
+
 }
 
 
+function mainResSlide() {
+    const sl = new Swiper('.res_slide', {
+
+    })
+}
+
 function mainSloganTimeLine() {
     const tl = gsap.timeline();
-
-    tl.to('#mainSlogan .m_txt_slide', { scale: 0, });
-    tl.to('#mainSlogan .time_area', { scale: 5, autoAlpha: 0 });
+    tl.set({}, {}, '+=1');
+    //tl.set('#mainSlogan .m_txt_slide', { y: -50 });
+    tl.to('#mainSlogan .m_txt_slide', { rotation: 180 });
+    tl.set({}, {}, '+=1');
+    //tl.to('#mainSlogan .time_area', { scale: 5, autoAlpha: 0 });
 
     ScrollTrigger.create({
         animation: tl,
@@ -106,9 +133,33 @@ function mainSloganTimeLine() {
         pin: true,
         scrub: 1,
         end: "+=600%",
+        //markers: true
+    })
+}
+
+
+function mainVisualTimeLine() {
+    const tl = gsap.timeline();
+
+    tl.set({}, {}, "-=2")
+    tl.from('#mainVisual h2', { x: -400, });
+    tl.set({}, {}, "+=1")
+    tl.to('#mainVisual .mockup', { y: -100, });
+    tl.set({}, {}, "+=2");
+    //tl.to('#mainSlogan .time_area', { scale: 5, autoAlpha: 0 });
+
+    ScrollTrigger.create({
+        animation: tl,
+        trigger: '#mainVisual',
+        pin: true,
+        scrub: 1,
+        //start: "40% top",
+        end: "+=400%",
         markers: true
     })
 }
+
+
 
 
 

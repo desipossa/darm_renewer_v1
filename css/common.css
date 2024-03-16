@@ -58,7 +58,7 @@ body {
 
 .bzf em {
   display: block;
-  padding: 40px 80px 40px 40px;
+  padding: 40px 80px 40px 80px;
 }
 .bzf em::before {
   content: "";
@@ -66,7 +66,7 @@ body {
   inset: 0 auto auto 50%;
   width: calc(100% + 30px);
   height: 1px;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.25);
   transform: translate(-50%, 0);
 }
 
@@ -76,7 +76,7 @@ body {
   inset: auto auto 0 50%;
   width: calc(100% + 30px);
   height: 1px;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.25);
   transform: translate(-50%, 0);
 }
 
@@ -86,7 +86,7 @@ body {
   inset: 50% auto auto 0;
   height: calc(100% + 30px);
   width: 1px;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.25);
   transform: translate(0, -50%);
 }
 
@@ -96,6 +96,6 @@ body {
   inset: 50% 0 auto auto;
   height: calc(100% + 30px);
   width: 1px;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.25);
   transform: translate(0, -50%);
 }
