@@ -5,6 +5,7 @@
     setInterval(watch, 1000);
     mainSloganTimeLine();
     mainVisualTimeLine();
+    mainPortfolioTimeLine();
     smoothScroll();
 })();
 
@@ -27,7 +28,8 @@ function mainVisualSlideTimeline(itm, num, slideNumber) {
     tl.from(itm[0], { x: 600, autoAlpha: 0, duration: 0.5, delay: 2, },);
     tl.from(itm[2], { x: 600, autoAlpha: 0, duration: 0.5 }, "-=1");
     tl.from(itm[3], { x: 600, autoAlpha: 0, duration: 0.5 });
-    tl.from(itm[4], { scale: 2, autoAlpha: 0, duration: 0.5, ease: 'bounce' });
+    //tl.from(itm[4], { scale: 2, autoAlpha: 0, duration: 0.5, ease: 'bounce' });
+    tl.to(itm[4], { y: -100 });
 }
 
 
@@ -87,6 +89,10 @@ function mainTxtSLide() {
             disableOnInteraction: false,
         },
         on: {
+            init: function () {
+                const itms = slides[0].querySelectorAll('.ani-itm');
+                mainVisualSlideTimeline(itms);
+            },
             slideChangeTransitionStart: function () {
                 //console.log(this.realIndex);
                 //document.querySelector('h1').innerText = this.realIndex;
@@ -115,7 +121,20 @@ function mainTxtSLide() {
 
 function mainResSlide() {
     const sl = new Swiper('.res_slide', {
-
+        loop: true,
+        effect: "cube",
+        grabCursor: true,
+        cubeEffect: {
+            shadow: true,
+            slideShadows: false,
+            shadowOffset: 40,
+            shadowScale: 0.4,
+        },
+        centeredSlides: true,
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+        },
     })
 }
 
@@ -123,7 +142,7 @@ function mainSloganTimeLine() {
     const tl = gsap.timeline();
     tl.set({}, {}, '+=1');
     //tl.set('#mainSlogan .m_txt_slide', { y: -50 });
-    tl.to('#mainSlogan .m_txt_slide', { rotation: 180 });
+    tl.to('#mainSlogan .m_txt_slide', { rotation: 180, duration: 3 });
     tl.set({}, {}, '+=1');
     //tl.to('#mainSlogan .time_area', { scale: 5, autoAlpha: 0 });
 
@@ -145,12 +164,35 @@ function mainVisualTimeLine() {
     tl.from('#mainVisual h2', { x: -400, });
     tl.set({}, {}, "+=1")
     tl.to('#mainVisual .mockup', { y: -100, });
+    tl.to('#mainVisual.default_section', { '--scale': 1, '--left': '60rem', });
     tl.set({}, {}, "+=2");
     //tl.to('#mainSlogan .time_area', { scale: 5, autoAlpha: 0 });
 
     ScrollTrigger.create({
         animation: tl,
         trigger: '#mainVisual',
+        pin: true,
+        scrub: 1,
+        start: "60px top",
+        end: "+=600%",
+        markers: true
+    })
+}
+
+
+function mainPortfolioTimeLine() {
+    const tl = gsap.timeline();
+
+    tl.set({}, {}, "-=2")
+    tl.from('#mainPortfolio h2', { x: -400, });
+    tl.set({}, {}, "+=1")
+    tl.to('#mainPortfolio .mockup', { y: -100, });
+    tl.set({}, {}, "+=2");
+    //tl.to('#mainSlogan .time_area', { scale: 5, autoAlpha: 0 });
+
+    ScrollTrigger.create({
+        animation: tl,
+        trigger: '#mainPortfolio',
         pin: true,
         scrub: 1,
         //start: "40% top",

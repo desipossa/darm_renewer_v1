@@ -1,3 +1,17 @@
+:root {
+  --primary-color: #ffc300;
+  --secondary-color: tomato;
+  --tertiary-color: blue;
+  --background-color: #f9f9f9;
+  --darkgray-color: #444444;
+  --lightgray-color: #e5e5e5;
+  --white-color: #ffffff;
+
+  --fz-big: 8rem;
+  --fz-middle: 4rem;
+  --fz-small: 1.4rem;
+}
+
 body {
   background: url(../images/patten01.png);
   background: url(../images/afu_01.jpg);
@@ -61,6 +75,49 @@ body {
   justify-content: flex-end;
 }
 
+#mainIntro .inner {
+  display: flex;
+  align-items: center;
+}
+
+#mainIntro h2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+
+  margin: 0 0 3.2rem 0;
+}
+
+#mainIntro h2 em {
+  display: block;
+  white-space: nowrap;
+  font-size: 14rem;
+  font-weight: 800;
+  line-height: 0.7;
+
+  text-indent: -1rem;
+}
+
+#mainIntro h2 strong:nth-child(1) em {
+  text-indent: -3rem;
+}
+
+#mainIntro h2 strong:nth-child(1) em::first-letter {
+  font-weight: 900;
+  font-size: 18rem;
+  color: var(--primary-color);
+}
+
+#mainIntro .title span {
+  display: inline-block;
+  font-size: 4rem;
+  font-weight: 900;
+  margin: 0 0 3.2rem 0;
+}
+
+#mainIntro .mockup img {
+}
 #mainSlogan {
   min-height: 100vh;
   padding: 12rem 0;
@@ -110,7 +167,7 @@ body {
 #mainSlogan .m_txt_slide .itm:not(.swiper-slide-active) img {
   filter: grayscale(1) opacity(0.05) blur(10px);
 }
-#mainSlogan .swiper-cube .swiper-cube-shadow:before {
+#mainSlogan .swiper-cube .swiper-cube-shadow::before {
   content: "";
   background: rgba(0, 0, 0, 0.2);
   position: absolute;
@@ -129,7 +186,7 @@ body {
   height: 4rem;
 
   border-radius: 2rem;
-  background: #fad000;
+  background: var(--primary-color);
 }
 
 /* #mainSlogan .swiper-wrapper {
@@ -211,40 +268,6 @@ body {
     7px 7px 1px rgba(0, 0, 0, 0.5), 0px 0px 6px rgba(0, 0, 0, 0.2);
 }
 
-#mainSlogan .time_area {
-  outline: none;
-}
-
-#mainSlogan::before {
-  content: "";
-
-  position: absolute;
-  top: 40rem;
-  left: -10rem;
-
-  width: 40rem;
-  height: 40rem;
-
-  border-radius: 50px;
-  background: linear-gradient(145deg, #f1f1f1, #ffffff);
-  box-shadow: 20px 20px 60px #d4d4d4, -20px -20px 60px #ffffff;
-}
-
-#mainSlogan::after {
-  content: "";
-
-  position: absolute;
-  top: -20rem;
-  right: -10rem;
-
-  width: 40rem;
-  height: 40rem;
-
-  border-radius: 50px;
-  background: linear-gradient(145deg, #f1f1f1, #ffffff);
-  box-shadow: 20px 20px 60px #d4d4d4, -20px -20px 60px #ffffff;
-}
-
 #mainSlogan .time_area .clock {
   width: 80rem;
   height: 80rem;
@@ -293,66 +316,37 @@ body {
   border-radius: 50%;
 }
 
-#mainVisual {
+.default_section {
+  position: relative;
   min-height: 100vh;
-  padding: 16rem 0;
+  padding: 10rem 0;
   /* overflow: hidden; */
   /* background: url(../images/darm_main02.jpg) no-repeat center center/cover; */
 }
 
-#mainVisual .title {
-  position: relative;
-  max-width: 144rem;
-  margin: 0 auto 12rem auto;
-  width: 100%;
+.default_box {
+  --size: 40rem;
+  --scale: 1;
+  --left: -10rem;
 }
 
-#mainVisual h2 {
-  content: "Responsive Web";
+.default_box::before {
+  content: "";
 
-  font-size: 18rem;
-  font-weight: 900;
+  position: absolute;
+  top: 20rem;
+  left: var(--left);
 
-  display: block;
+  width: 40rem;
+  height: 40rem;
 
-  max-width: 144rem;
-  margin: 0 auto;
-  width: 100%;
+  border-radius: 50px;
+  background: linear-gradient(145deg, #f1f1f1, #ffffff);
+  box-shadow: 20px 20px 60px #d4d4d4, -20px -20px 60px #ffffff;
 
-  color: #fff;
-
-  text-shadow: 20px 20px 60px #d4d4d4, -20px -20px 60px #ffffff;
-  -webkit-text-stroke: 1px rgba(212, 212, 212, 0.5);
-
-  /* text-shadow: 1px 0 3px rgba(255, 255, 255, 0.25);
-  background: linear-gradient(to right top, #0a96ba, #032777, #333333);
-  color: transparent;
-  -webkit-background-clip: text; */
+  transform: scale(var(--scale));
 }
-
-#mainVisual .title strong {
-  margin: 0 auto 4rem auto;
-  font-size: 2rem;
-  text-indent: 0;
-
-  padding: 0 0 0 0;
-
-  /* text-shadow: 1px 0 3px rgba(255, 255, 255, 0.25);
-  background: linear-gradient(to right top, #e11009, #034677, #333333);
-  color: transparent;
-  -webkit-background-clip: text; */
-}
-
-#mainVisual .title strong em {
-  padding: 0 0 0 0;
-}
-
-#mainVisual .title strong em::first-letter {
-  color: tomato;
-  font-size: 4rem;
-}
-
-#mainVisual::after {
+.default_box::after {
   content: "";
 
   position: absolute;
@@ -367,16 +361,56 @@ body {
   box-shadow: 20px 20px 60px #d4d4d4, -20px -20px 60px #ffffff;
 }
 
-#mainVisual .mockup {
+.default_section .title {
+  position: relative;
+  max-width: 144rem;
+  margin: 0 auto 12rem auto;
+  width: 100%;
+}
+
+.design_set > li:nth-child(1) {
+  content: "";
+  position: absolute;
+  top: 10rem;
+  right: 10rem;
+  z-index: 999;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  background: linear-gradient(to right top, #0a96ba, #032777, #333333);
+}
+
+.default_section .title strong {
+  /* margin: 0 auto 4rem auto;
+  font-size: 2rem;
+  text-indent: 0;
+
+  padding: 0 0 0 0; */
+
+  /* text-shadow: 1px 0 3px rgba(255, 255, 255, 0.25);
+  background: linear-gradient(to right top, #e11009, #034677, #333333);
+  color: transparent;
+  -webkit-background-clip: text; */
+}
+
+.default_section .title strong em {
+  padding: 0 0 0 0;
+}
+
+.default_section.title strong em::first-letter {
+  color: tomato;
+  font-size: 4rem;
+}
+
+.default_section .mockup {
   position: relative;
   /* position: absolute;
   top: 20rem;
   right: -10rem; */
   width: 80rem;
-  height: 75rem;
 }
 
-#mainVisual .inner::after {
+.default_section .inner::after {
   content: "";
   position: absolute;
   width: 30rem;
@@ -389,20 +423,20 @@ body {
 
   border-radius: 50%;
 }
-#mainVisual .inner {
+.default_section .inner {
   display: flex;
   gap: 12rem;
 }
 
-#mainVisual .inner .title {
+.default_section .inner .title {
   flex: 1;
 }
 
-#mainVisual .inner .title p {
+.default_section .inner .title p {
   line-height: 1.4;
   word-break: keep-all;
 }
 
-#mainVisual .inner img {
-  width: 60rem;
+.default_section .inner img {
+  width: 70rem;
 }

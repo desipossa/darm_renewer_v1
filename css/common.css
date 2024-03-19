@@ -1,17 +1,3 @@
-:root {
-  --primary-color: #ffc300;
-  --secondary-color: tomato;
-  --tertiary-color: blue;
-  --background-color: #f9f9f9;
-  --darkgray-color: #444444;
-  --lightgray-color: #e5e5e5;
-  --white-color: #ffffff;
-
-  --fz-big: 8rem;
-  --fz-middle: 4rem;
-  --fz-small: 1.4rem;
-}
-
 .fp-watermark {
   display: none;
 }
@@ -33,51 +19,13 @@ body {
 
 .bzf {
   position: relative;
-  display: block;
-  color: #fff;
-  font-size: 12rem;
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: -0.025em;
-  text-indent: -16px;
-  margin: 4rem 0;
+  display: inline-block;
   color: transparent;
   background: #000;
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
   text-shadow: 1px 3px 3px rgba(255, 255, 255, 0.3);
-  /* -webkit-text-stroke: 0.4px rgba(0, 0, 0, 0.2); */
-
-  border-bottom: 1px solid #ddd;
-}
-
-.bzf i {
-  font-size: 14rem;
-}
-
-.bzf em {
-  display: block;
-  padding: 40px 80px 40px 80px;
-}
-.bzf em::before {
-  content: "";
-  position: absolute;
-  inset: 0 auto auto 50%;
-  width: calc(100% + 30px);
-  height: 1px;
-  background: rgba(0, 0, 0, 0.25);
-  transform: translate(-50%, 0);
-}
-
-.bzf em::after {
-  content: "";
-  position: absolute;
-  inset: auto auto 0 50%;
-  width: calc(100% + 30px);
-  height: 1px;
-  background: rgba(0, 0, 0, 0.25);
-  transform: translate(-50%, 0);
 }
 
 .bzf::before {
@@ -98,4 +46,45 @@ body {
   width: 1px;
   background: rgba(0, 0, 0, 0.25);
   transform: translate(0, -50%);
+}
+
+.bzf em::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto auto 50%;
+  width: calc(100% + 30px);
+  height: 1px;
+  background: rgba(0, 0, 0, 0.25);
+  transform: translate(-50%, 0);
+}
+
+.bzf em::after {
+  content: "";
+  position: absolute;
+  inset: auto auto 0 50%;
+  width: calc(100% + 30px);
+  height: 1px;
+  background: rgba(0, 0, 0, 0.25);
+  transform: translate(-50%, 0);
+}
+
+.nmf {
+  color: #fff;
+
+  text-shadow: 20px 20px 60px #d4d4d4, -20px -20px 60px #ffffff;
+  -webkit-text-stroke: 1px rgba(212, 212, 212, 0.5);
+
+  /* text-shadow: 1px 0 3px rgba(255, 255, 255, 0.25);
+  background: linear-gradient(to right top, #0a96ba, #032777, #333333);
+  color: transparent;
+  -webkit-background-clip: text; */
+}
+
+.design_set {
+  position: absolute;
+  inset: 0 auto auto 0;
+}
+
+.design_set span {
+  display: inline-block;
 }
