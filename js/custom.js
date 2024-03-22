@@ -2,12 +2,59 @@
     //mainSloganTimeLine();
     mainTxtSLide();
     mainResSlide();
+    mainBannerSlide();
     setInterval(watch, 1000);
     mainSloganTimeLine();
+    //mainBannerTimeline();
     mainVisualTimeLine();
     mainPortfolioTimeLine();
     smoothScroll();
+    mainIntroTimelime();
 })();
+
+
+function mainIntroTimelime() {
+    const tl = gsap.timeline();
+
+    const fn = document.querySelectorAll('.m>div');
+
+    fn.forEach((navi, num) => {
+        tl.to(`#v0${num + 1}`, {
+            motionPath: {
+                path: `#p0${num + 1}`,
+                align: `#p0${num + 1}`,
+                alignOrigin: [0.5, 0.5],
+                autoRotate: true,
+
+            },
+            duration: 2,
+            delay: 0.3 * num,
+        })
+    });
+
+    tl.from('.mainVisal .title h2', {
+        x: 2500,
+    })
+}
+
+
+function mainBannerTimeline() {
+    const tl = gsap.timeline();
+
+    tl.from('#mainBanner .bar', {
+        width: '10rem',
+    })
+
+    ScrollTrigger.create({
+        animation: tl,
+        trigger: '#mainBanner',
+        pin: true,
+        scrub: 1,
+        start: 'top top',
+        end: "+=3000",
+        markers: true
+    })
+}
 
 
 function mainVisualSlideTimeline(itm, num, slideNumber) {
@@ -80,7 +127,7 @@ function mainTxtSLide() {
         cubeEffect: {
             shadow: true,
             slideShadows: false,
-            shadowOffset: 40,
+            shadowOffset: 80,
             shadowScale: 0.4,
         },
         centeredSlides: true,
@@ -123,12 +170,13 @@ function mainResSlide() {
     const sl = new Swiper('.res_slide', {
         loop: true,
         effect: "cube",
+        speed: 1500,
         grabCursor: true,
         cubeEffect: {
             shadow: true,
             slideShadows: false,
-            shadowOffset: 40,
-            shadowScale: 0.4,
+            shadowOffset: 120,
+            shadowScale: 0.6,
         },
         centeredSlides: true,
         autoplay: {
@@ -137,6 +185,35 @@ function mainResSlide() {
         },
     })
 }
+
+
+function mainBannerSlide() {
+    const sl = new Swiper('.ba_slide', {
+        loop: true,
+        speed: 4000,
+        slidesPerView: 8,
+        spaceBetween: 20,
+        centeredSlides: true,
+        autoplay: {
+            delay: 0,
+            disableOnInteraction: false,
+        },
+    });
+
+
+    const sl2 = new Swiper('.ba_slide2', {
+        loop: true,
+        speed: 4000,
+        slidesPerView: 5,
+        spaceBetween: 20,
+        centeredSlides: true,
+        autoplay: {
+            delay: 0,
+            disableOnInteraction: false,
+        },
+    })
+}
+
 
 function mainSloganTimeLine() {
     const tl = gsap.timeline();
@@ -160,7 +237,7 @@ function mainSloganTimeLine() {
 function mainVisualTimeLine() {
     const tl = gsap.timeline();
 
-    tl.set({}, {}, "-=2")
+    // tl.set({}, {}, "-=2")
     tl.from('#mainVisual h2', { x: -400, });
     tl.set({}, {}, "+=1")
     tl.to('#mainVisual .mockup', { y: -100, });
@@ -173,8 +250,8 @@ function mainVisualTimeLine() {
         trigger: '#mainVisual',
         pin: true,
         scrub: 1,
-        start: "60px top",
-        end: "+=600%",
+        start: "center center",
+        end: "+=600% center",
         markers: true
     })
 }

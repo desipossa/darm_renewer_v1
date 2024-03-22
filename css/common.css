@@ -81,10 +81,147 @@ body {
 }
 
 .design_set {
-  position: absolute;
-  inset: 0 auto auto 0;
+  /* position: relative; */
 }
 
 .design_set span {
   display: inline-block;
+  font-size: 0;
+}
+
+.default_section {
+  position: relative;
+  /* min-height: 100vh; */
+  padding: 10rem 0;
+
+  /* overflow: hidden; */
+  /* background: url(../images/darm_main02.jpg) no-repeat center center/cover; */
+}
+
+.default_box {
+  --size: 40rem;
+  --scale: 1;
+  --left: -10rem;
+}
+
+.default_box::before {
+  content: "";
+
+  position: absolute;
+  top: 40rem;
+  left: var(--left);
+  /* z-index: 2; */
+
+  width: 40rem;
+  height: 40rem;
+
+  border-radius: 50px;
+  background: linear-gradient(145deg, #f1f1f1, #ffffff);
+  box-shadow: 20px 20px 60px #d4d4d4, -20px -20px 60px #ffffff;
+
+  transform: scale(var(--scale));
+}
+.default_box::after {
+  content: "";
+
+  position: absolute;
+  top: -5rem;
+  right: -10rem;
+  /* z-index: 2; */
+
+  width: 40rem;
+  height: 40rem;
+
+  border-radius: 50px;
+  background: linear-gradient(145deg, #f1f1f1, #ffffff);
+  box-shadow: 20px 20px 60px #d4d4d4, -20px -20px 60px #ffffff;
+}
+
+.default_section .title {
+  position: relative;
+  max-width: 144rem;
+  margin: 0 auto 12rem auto;
+  width: 100%;
+  z-index: 999;
+}
+
+/* .design_set > li:nth-child(1) {
+  content: "";
+  position: absolute;
+  top: 10rem;
+  right: 10rem;
+  z-index: 999;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  background: linear-gradient(to right top, #0a96ba, #032777, #333333);
+} */
+
+.default_section .title strong em {
+  font-size: 8rem;
+  font-weight: 45;
+  padding: 0 0 0 0;
+}
+
+.default_section .title span {
+  /* margin: 0 auto 4rem auto;
+  font-size: 2rem;
+  text-indent: 0;
+
+  padding: 0 0 0 0; */
+
+  /* text-shadow: 1px 0 3px rgba(255, 255, 255, 0.25);
+  background: linear-gradient(to right top, #e11009, #034677, #333333);
+  color: transparent;
+  -webkit-background-clip: text; */
+
+  font-size: 14rem;
+  font-weight: 900;
+
+  display: block;
+  margin: -4rem 0 0 0;
+}
+
+/* .default_section.title strong em::first-letter {
+  color: tomato;
+  font-size: 4rem;
+} */
+
+.default_section .mockup {
+  position: relative;
+  /* position: absolute;
+  top: 20rem;
+  right: -10rem; */
+  width: 80rem;
+}
+
+.default_section .inner::after {
+  content: "";
+  position: absolute;
+  width: 30rem;
+  height: 30rem;
+  top: 10rem;
+  left: 60rem;
+
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(3px);
+
+  border-radius: 50%;
+}
+.default_section .inner {
+  display: flex;
+  gap: 12rem;
+}
+
+.default_section .inner .title {
+  flex: 1;
+}
+
+.default_section .title p {
+  line-height: 1.4;
+  word-break: keep-all;
+}
+
+.default_section .inner img {
+  width: 70rem;
 }

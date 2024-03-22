@@ -75,6 +75,32 @@ body {
   justify-content: flex-end;
 }
 
+#side_lnk {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  height: 100vh;
+  background: #333333;
+  padding: 10rem 1rem;
+}
+
+#side_lnk .snb {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+#side_lnk .snb span {
+  color: #d4d4d4;
+  font-size: 2rem;
+}
+
+#mainIntro {
+  position: relative;
+  overflow: hidden;
+}
+
 #mainIntro .inner {
   display: flex;
   align-items: center;
@@ -117,11 +143,187 @@ body {
 }
 
 #mainIntro .mockup img {
+  filter: grayscale(1);
 }
+
+#mainIntro .design_set .a01 {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  z-index: -1;
+
+  width: 60%;
+  height: 10rem;
+  border-radius: 5rem;
+  transform: rotate(-20deg);
+
+  background: linear-gradient(to right top, #0a96ba, #032777, #333333);
+}
+
+#mainIntro .design_set .a02 {
+  position: absolute;
+  top: 20rem;
+  right: 10rem;
+  z-index: 1000;
+
+  width: 30rem;
+  height: 30rem;
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(3px);
+}
+
+#mainIntro .swiper-cube .swiper-cube-shadow::before {
+  content: "";
+  background: rgba(0, 0, 0, 0.9);
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  filter: blur(150px);
+}
+
+.path {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 999;
+}
+
+.path svg {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.path svg path {
+  stroke: tomato;
+  stroke-dasharray: 5px 10px;
+}
+
+.m {
+  position: absolute;
+  top: -100%;
+  left: -100%;
+}
+
+.n img {
+  max-width: 150px;
+  filter: drop-shadow(-4px -10px 10px rgba(0, 0, 0, 0.4));
+}
+
+.m > div:nth-child(1) .n {
+  animation: fly 1s infinite;
+}
+
+.m > div:nth-child(2) .n {
+  animation: fly 2s infinite;
+}
+
+.m > div:nth-child(3) .n {
+  animation: fly 1.5s infinite;
+}
+
+.m > div:nth-child(4) .n {
+  animation: fly 2s infinite;
+}
+
+.m > div:nth-child(5) .n {
+  animation: fly 1.5s infinite;
+}
+
+@keyframes fly {
+  0% {
+    transform: scaleY(0.5);
+  }
+
+  50% {
+    transform: scaleY(0.8);
+  }
+
+  100% {
+    transform: scaleY(0.5);
+  }
+}
+/* 
+
+
+
+
+
+
+
+*/
+
+#mainBanner {
+  padding: 20rem 0;
+}
+
+#mainBanner .title {
+  text-align: right;
+}
+
+#mainBanner .icon {
+  position: absolute;
+  top: -30rem;
+  left: 10rem;
+  font-size: 10rem;
+  font-weight: 900;
+}
+
+#mainBanner .ba_slide,
+#mainBanner2 .ba_slide2 {
+  transform: rotate(4deg) scale(1.2);
+}
+
+#mainBanner .ba_slide .swiper-wrapper,
+#mainBanner2 .ba_slide2 .swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+
+/* .swiper-container-free-mode > .swiper-wrapper {
+  transition-timing-function: linear;
+} */
+
+#mainBanner .ba_slide .itm,
+#mainBanner2 .ba_slide2 .itm {
+  border-radius: 2rem;
+  overflow: hidden;
+  border: 4px solid #fff;
+  outline: 1px dashed #666;
+  margin: 40px 0;
+  /* padding: 20px 0 30px 0; */
+  background: #333;
+}
+
+/* #mainBanner .bar {
+  display: inline-flex;
+  margin: 2rem 0 0 0;
+  width: 100rem;
+  height: 1rem;
+  border-radius: 0.5rem;
+  background: linear-gradient(to right top, #0a96ba, #032777, #333333);
+} */
+
+/* 
+
+
+
+
+
+
+
+*/
 #mainSlogan {
   min-height: 100vh;
-  padding: 12rem 0;
+  /* padding: 24rem 0 0 0; */
   /* background: #f9f9f9; */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #mainSlogan h2 {
@@ -148,6 +350,16 @@ body {
 }
 .slide_link button {
   margin: 0 2rem 0 0;
+}
+
+#mainSlogan h2 {
+  display: block;
+}
+
+#mainSlogan h2 em {
+  display: block;
+  font-size: 18rem;
+  font-weight: 900;
 }
 
 #mainSlogan .inner .swiper-wrapper * {
@@ -182,6 +394,7 @@ body {
   content: "";
 
   position: absolute;
+  bottom: 0;
   width: 100rem;
   height: 4rem;
 
@@ -215,10 +428,21 @@ body {
 
 #mainSlogan .img_area {
   position: absolute;
-  width: 32rem;
-  top: 0;
+  top: 10rem;
   right: 4rem;
 }
+
+#mainSlogan .img_area figure {
+  padding: 4rem 2rem;
+}
+
+#mainSlogan .img_area img {
+  width: 32rem;
+  height: 32rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
 #mainSlogan .time_area {
   position: absolute;
   top: 14rem;
@@ -309,134 +533,10 @@ body {
   );
 }
 
-#mainSlogan .img_area img {
-  width: 100%;
-  height: 32rem;
-  object-fit: cover;
-  border-radius: 50%;
-}
+/* #mainVisual * {
+  outline: 1px solid;
+} */
 
-.default_section {
-  position: relative;
-  min-height: 100vh;
-  padding: 10rem 0;
-  /* overflow: hidden; */
-  /* background: url(../images/darm_main02.jpg) no-repeat center center/cover; */
-}
-
-.default_box {
-  --size: 40rem;
-  --scale: 1;
-  --left: -10rem;
-}
-
-.default_box::before {
-  content: "";
-
-  position: absolute;
-  top: 20rem;
-  left: var(--left);
-
-  width: 40rem;
-  height: 40rem;
-
-  border-radius: 50px;
-  background: linear-gradient(145deg, #f1f1f1, #ffffff);
-  box-shadow: 20px 20px 60px #d4d4d4, -20px -20px 60px #ffffff;
-
-  transform: scale(var(--scale));
-}
-.default_box::after {
-  content: "";
-
-  position: absolute;
-  top: -10rem;
-  right: -10rem;
-
-  width: 40rem;
-  height: 40rem;
-
-  border-radius: 50px;
-  background: linear-gradient(145deg, #f1f1f1, #ffffff);
-  box-shadow: 20px 20px 60px #d4d4d4, -20px -20px 60px #ffffff;
-}
-
-.default_section .title {
-  position: relative;
-  max-width: 144rem;
-  margin: 0 auto 12rem auto;
-  width: 100%;
-}
-
-.design_set > li:nth-child(1) {
-  content: "";
-  position: absolute;
-  top: 10rem;
-  right: 10rem;
-  z-index: 999;
-  width: 10rem;
-  height: 10rem;
-  border-radius: 50%;
-  background: linear-gradient(to right top, #0a96ba, #032777, #333333);
-}
-
-.default_section .title strong {
-  /* margin: 0 auto 4rem auto;
-  font-size: 2rem;
-  text-indent: 0;
-
-  padding: 0 0 0 0; */
-
-  /* text-shadow: 1px 0 3px rgba(255, 255, 255, 0.25);
-  background: linear-gradient(to right top, #e11009, #034677, #333333);
-  color: transparent;
-  -webkit-background-clip: text; */
-}
-
-.default_section .title strong em {
-  padding: 0 0 0 0;
-}
-
-.default_section.title strong em::first-letter {
-  color: tomato;
-  font-size: 4rem;
-}
-
-.default_section .mockup {
-  position: relative;
-  /* position: absolute;
-  top: 20rem;
-  right: -10rem; */
-  width: 80rem;
-}
-
-.default_section .inner::after {
-  content: "";
-  position: absolute;
-  width: 30rem;
-  height: 30rem;
-  top: 10rem;
-  left: 60rem;
-
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(3px);
-
-  border-radius: 50%;
-}
-.default_section .inner {
-  display: flex;
-  gap: 12rem;
-}
-
-.default_section .inner .title {
-  flex: 1;
-}
-
-.default_section .inner .title p {
-  line-height: 1.4;
-  word-break: keep-all;
-}
-
-.default_section .inner img {
-  width: 70rem;
+#mainVisual .inner {
+  margin: 20rem auto 0 auto;
 }
