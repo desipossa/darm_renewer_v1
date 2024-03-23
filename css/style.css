@@ -20,13 +20,13 @@ body {
 }
 
 #Wrapper {
-  /* overflow: hidden; */
+  /* overflow-x: hidden; */
 }
 
 #header {
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 1001;
   display: flex;
   flex-direction: column;
 }
@@ -79,7 +79,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1000;
+  z-index: 1002;
   height: 100vh;
   background: #333333;
   padding: 10rem 1rem;
@@ -267,8 +267,8 @@ body {
 
 #mainBanner .icon {
   position: absolute;
-  top: -30rem;
-  left: 10rem;
+  top: -18rem;
+  left: 5rem;
   font-size: 10rem;
   font-weight: 900;
 }

@@ -225,3 +225,15 @@ body {
 .default_section .inner img {
   width: 70rem;
 }
+
+.default_btn {
+  display: inline-block;
+  background: linear-gradient(145deg, #f1f1f1, #ffffff);
+  box-shadow: 20px 20px 60px #d4d4d4, -20px -20px 60px #ffffff;
+  border: 1px solid #fff;
+  border-radius: 2rem;
+  padding: 10px 36px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 2rem;
+}

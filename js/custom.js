@@ -191,7 +191,7 @@ function mainBannerSlide() {
     const sl = new Swiper('.ba_slide', {
         loop: true,
         speed: 4000,
-        slidesPerView: 8,
+        slidesPerView: 5,
         spaceBetween: 20,
         centeredSlides: true,
         autoplay: {
@@ -204,7 +204,7 @@ function mainBannerSlide() {
     const sl2 = new Swiper('.ba_slide2', {
         loop: true,
         speed: 4000,
-        slidesPerView: 5,
+        slidesPerView: 8,
         spaceBetween: 20,
         centeredSlides: true,
         autoplay: {
