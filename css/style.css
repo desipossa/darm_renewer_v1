@@ -77,6 +77,10 @@ body {
   justify-content: flex-end;
 }
 
+/* #content {
+  margin: 0 0 0 40px;
+} */
+
 #side_lnk {
   position: fixed;
   top: 0;
@@ -261,12 +265,12 @@ body {
 .mainSlogan .wrap_inner .title {
   flex: 4;
   color: #fff;
-  padding: 10rem;
+  padding: 10rem 20rem;
   text-align: right;
 }
 
 .mainSlogan .wrap_inner .title h2 {
-  font-size: 6.2rem;
+  font-size: 8rem;
   font-weight: 900;
   margin: 0 0 0.8rem 0;
   /* -webkit-text-stroke: 1px rgba(0, 0, 0, 0.5); */
@@ -278,10 +282,19 @@ body {
   margin: 0 0 1.6rem 0;
 }
 
-.ms01 .title {
+.ms01 {
   background: #519bb8 url(../images/patten04.png);
+  /* clip-path: polygon(5% 0%, 95% 0%, 100% 100%, 0% 100%); */
 }
-.ms02 .title {
+
+.ms01 .img_box {
+  clip-path: polygon(0 0, 100% 0%, 90% 100%, 0% 100%);
+}
+
+.ms02 .img_box {
+  clip-path: polygon(10% 0, 100% 0%, 100% 100%, 0% 100%);
+}
+.ms02 {
   background: #e9ba2e url(../images/patten04.png);
 }
 
@@ -387,6 +400,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  overflow: hidden;
 }
 
 #mainSlogan h2 {
