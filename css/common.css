@@ -237,3 +237,44 @@ body {
   font-weight: 500;
   font-size: 2rem;
 }
+
+.m_slide .mbile {
+  position: relative;
+  display: inline-block;
+  background: #fff;
+  box-shadow: 10px 10px 20px #d4d4d4, -20px -20px 20px #ffffff;
+  border: 8px solid #f7f7f7;
+  outline: 2px solid #fff;
+  border-radius: 2rem;
+  font-weight: 500;
+  font-size: 2rem;
+  margin: 40px 0;
+  padding: 0 0 24px 0;
+}
+
+.m_slide .mbile::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: 30%;
+  right: 30%;
+  height: 10px;
+  background: #f7f7f7;
+  border-radius: 0 0 8px 8px;
+}
+
+.m_slide .mbile::before {
+  content: "";
+  position: absolute;
+  bottom: 1rem;
+  left: 30%;
+  right: 30%;
+  height: 4px;
+  background: #f1f1f1;
+  border-radius: 2px;
+}
+
+.m_slide .mbile .img_box {
+  border-radius: 1.2rem;
+  overflow: hidden;
+}
