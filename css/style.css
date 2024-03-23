@@ -1,5 +1,5 @@
 :root {
-  --primary-color: #ffc300;
+  --primary-color: #f4cb4f;
   --secondary-color: tomato;
   --tertiary-color: blue;
   --background-color: #f9f9f9;
@@ -29,6 +29,8 @@ body {
   z-index: 1001;
   display: flex;
   flex-direction: column;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(4px);
 }
 
 #header .header_content {
@@ -247,6 +249,67 @@ body {
     transform: scaleY(0.5);
   }
 }
+
+.mainSlogan .wrap_inner {
+  display: flex;
+}
+
+.mainSlogan .wrap_inner .img_box {
+  flex: 3;
+}
+
+.mainSlogan .wrap_inner .title {
+  flex: 4;
+  color: #fff;
+  padding: 10rem;
+  text-align: right;
+}
+
+.mainSlogan .wrap_inner .title h2 {
+  font-size: 6.2rem;
+  font-weight: 900;
+  margin: 0 0 0.8rem 0;
+  /* -webkit-text-stroke: 1px rgba(0, 0, 0, 0.5); */
+}
+.mainSlogan .wrap_inner .title strong {
+  display: block;
+  font-size: 3.2rem;
+  font-weight: 100;
+  margin: 0 0 1.6rem 0;
+}
+
+.ms01 .title {
+  background: #519bb8 url(../images/patten04.png);
+}
+.ms02 .title {
+  background: #e9ba2e url(../images/patten04.png);
+}
+
+.ms03 .inner {
+  display: flex;
+  gap: 3.2rem;
+}
+
+.ms03 .inner h3 {
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin: 0 0 1.2rem 0;
+}
+
+.ms03 .inner p {
+  margin: 0 0 2.4rem 0;
+}
+
+/* 
+519bb8
+355c7b
+#337689
+#da544b
+#f4cb4f
+#6fa476
+
+*/
+
 /* 
 
 

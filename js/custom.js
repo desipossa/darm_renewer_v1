@@ -252,7 +252,7 @@ function mainVisualTimeLine() {
         scrub: 1,
         start: "center center",
         end: "+=600% center",
-        markers: true
+        //markers: true
     })
 }
 
@@ -274,7 +274,7 @@ function mainPortfolioTimeLine() {
         scrub: 1,
         //start: "40% top",
         end: "+=400%",
-        markers: true
+        //markers: true
     })
 }
 
