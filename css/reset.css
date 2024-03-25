@@ -58,6 +58,11 @@ button {
   border: 0;
 }
 
+input,
+textarea {
+  width: 100%;
+}
+
 table {
   border-spacing: 0px;
   border-collapse: collapse;

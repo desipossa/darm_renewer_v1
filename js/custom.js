@@ -180,7 +180,12 @@ function mainPortfolioSlide() {
             clickable: true,
         },
 
-
+        on: {
+            slideChangeTransitionStart: function () {
+                let num = this.realIndex > 8 ? (this.realIndex + 1) : `0` + (this.realIndex + 1);
+                document.querySelector('#mainBanner .num').innerHTML = num;
+            }
+        }
     })
 }
 
@@ -261,8 +266,17 @@ function mainVisualTimeLine() {
     tl.from('#mainVisual h2', { x: -400, });
     tl.set({}, {}, "+=1")
     tl.to('#mainVisual .mockup', { y: -100, });
-    tl.to('#mainVisual.default_section', { '--scale': 1, '--left': '60rem', });
-    tl.set({}, {}, "+=2");
+    tl.to('#mainVisual.default_section', { '--left': '120rem', });
+    tl.set('.section01 .inner .itm', {
+        background: 'var(--src-img) 0 0, url(./images/soda_mockup.png)',
+        //duration: 10,
+    })
+
+    tl.to('#mainVisual .inner .itm', {
+        background: 'var(--src-img) -960px 0, url(./images/soda_mockup.png)',
+        duration: 4,
+    })
+    tl.set({}, {}, "+=1");
     //tl.to('#mainSlogan .time_area', { scale: 5, autoAlpha: 0 });
 
     ScrollTrigger.create({
