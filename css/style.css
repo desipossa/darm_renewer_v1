@@ -104,7 +104,7 @@ body {
 
 #mainIntro {
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 #mainIntro .inner {
@@ -148,8 +148,20 @@ body {
   margin: 0 0 3.2rem 0;
 }
 
+#mainIntro .inner > * {
+  flex: 1;
+}
+
+#mainIntro .mockup {
+  min-width: 0;
+}
+
+#mainIntro .mockup figure {
+  /* margin: 0 -2rem 0 0;
+  padding: 0 2rem 0 0; */
+}
 #mainIntro .mockup img {
-  filter: grayscale(1);
+  /* filter: grayscale(1); */
 }
 
 #mainIntro .design_set .a01 {
@@ -161,7 +173,7 @@ body {
   width: 60%;
   height: 10rem;
   border-radius: 5rem;
-  transform: rotate(-20deg);
+  transform: rotate(-45deg);
 
   background: linear-gradient(to right top, #0a96ba, #032777, #333333);
 }
@@ -172,12 +184,13 @@ body {
   right: 10rem;
   z-index: 1000;
 
-  width: 30rem;
-  height: 30rem;
+  width: 20rem;
+  height: 20rem;
   border-radius: 50%;
 
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(3px);
+  border: 20px dashed #ddd;
 }
 
 #mainIntro .swiper-cube .swiper-cube-shadow::before {
@@ -285,17 +298,21 @@ body {
 .ms01 {
   background: #519bb8 url(../images/patten04.png);
   /* clip-path: polygon(5% 0%, 95% 0%, 100% 100%, 0% 100%); */
+  transform: rotate(-1deg) translate(2rem, 0);
 }
 
 .ms01 .img_box {
-  clip-path: polygon(0 0, 100% 0%, 90% 100%, 0% 100%);
+  clip-path: polygon(0 0, 95% 0%, 100% 100%, 0% 100%);
+  margin: -20px 0 0 0;
 }
 
 .ms02 .img_box {
-  clip-path: polygon(10% 0, 100% 0%, 100% 100%, 0% 100%);
+  clip-path: polygon(5% 0, 100% 0%, 100% 100%, 0% 100%);
+  margin: -20px 0 0 0;
 }
 .ms02 {
   background: #e9ba2e url(../images/patten04.png);
+  transform: rotate(1deg) translate(2rem, -4rem);
 }
 
 .ms03 .inner {
@@ -344,8 +361,8 @@ body {
 #mainBanner .icon {
   position: absolute;
   top: -18rem;
-  left: 5rem;
-  font-size: 10rem;
+  left: 50%;
+  font-size: 8rem;
   font-weight: 900;
 }
 
@@ -400,7 +417,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 #mainSlogan h2 {
@@ -435,12 +452,12 @@ body {
 
 #mainSlogan h2 em {
   display: block;
-  font-size: 18rem;
+  font-size: 12rem;
   font-weight: 900;
 }
 
 #mainSlogan .inner .swiper-wrapper * {
-  outline: 1px solid #eee;
+  outline: 1px solid #ddd;
 }
 
 #mainSlogan .m_txt_slide .itm {
@@ -471,7 +488,8 @@ body {
   content: "";
 
   position: absolute;
-  bottom: 0;
+  left: 10rem;
+  bottom: -10rem;
   width: 100rem;
   height: 4rem;
 
@@ -505,7 +523,7 @@ body {
 
 #mainSlogan .img_area {
   position: absolute;
-  top: 10rem;
+  top: 8rem;
   right: 4rem;
 }
 
@@ -575,6 +593,9 @@ body {
 
   border-radius: 50%;
   outline: 1px dashed #999;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: grayscale(1);
+  box-shadow: 20px 20px 60px #d4d4d4, -20px -20px 60px #ffffff;
 }
 
 #mainSlogan .time_area .clock span {

@@ -3,6 +3,7 @@
     mainTxtSLide();
     mainResSlide();
     mainBannerSlide();
+    mainPortfolioSlide();
     setInterval(watch, 1000);
     mainSloganTimeLine();
     //mainBannerTimeline();
@@ -165,6 +166,23 @@ function mainTxtSLide() {
 
 }
 
+function mainPortfolioSlide() {
+    const sl = new Swiper('#mainBanner .portfolio', {
+        loop: true,
+        speed: 1000,
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+        },
+        // If we need pagination
+        pagination: {
+            el: '.swiper-pagination',
+        },
+
+
+    })
+}
+
 
 function mainResSlide() {
     const sl = new Swiper('.res_slide', {
@@ -172,6 +190,7 @@ function mainResSlide() {
         effect: "cube",
         speed: 1500,
         grabCursor: true,
+        spaceBetween: 120,
         cubeEffect: {
             shadow: true,
             slideShadows: false,
