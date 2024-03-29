@@ -685,3 +685,55 @@ body {
   -webkit-mask-size: 100% auto;
   -webkit-mask-repeat: no-repeat; */
 }
+
+#mainCustomer .banner {
+  padding: 0 0 4rem 0;
+}
+
+#mainCustomer .lnk {
+  background: #fff;
+  border-top: 1px solid #333;
+}
+
+#mainCustomer .lnk .inner {
+  display: flex;
+  justify-content: flex-end;
+  line-height: 4rem;
+}
+
+#mainCustomer .lnk .inner > * {
+  border-right: 1px solid #ddd;
+  padding: 0 2.4rem;
+  font-size: 1.2rem;
+}
+
+#footer {
+  background: url(../images/afu_man.jpg) no-repeat center top/cover;
+}
+
+#footer .footer_bottom {
+}
+
+#footer .footer_top h2 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  margin: 0 0 2.4rem 0;
+}
+
+#footer .footer_top .inner {
+  display: flex;
+  align-items: center;
+  gap: 8rem;
+  min-height: 36rem;
+}
+
+#footer .footer_top .inner > * {
+  flex: 1;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+#footer .copy {
+  line-height: 6.4rem;
+  background: rgba(0, 0, 0, 0.3);
+  color: rgba(255, 255, 255, 0.6);
+}
