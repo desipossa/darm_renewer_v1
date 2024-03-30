@@ -7,8 +7,8 @@
     setInterval(watch, 1000);
     mainSloganTimeLine();
     //mainBannerTimeline();
-    mainVisualTimeLine();
-    mainPortfolioTimeLine();
+    mainFormTimeLine();
+    // mainPortfolioTimeLine();
     smoothScroll();
     mainIntroTimelime();
 })();
@@ -167,11 +167,11 @@ function mainTxtSLide() {
 }
 
 function mainPortfolioSlide() {
-    const sl = new Swiper('#mainBanner .portfolio', {
+    const sl = new Swiper('#mainPortfolioAll .portfolio', {
         loop: true,
-        speed: 1000,
+        speed: 2000,
         autoplay: {
-            delay: 4000,
+            delay: 8000,
             disableOnInteraction: false,
         },
         // If we need pagination
@@ -183,7 +183,7 @@ function mainPortfolioSlide() {
         on: {
             slideChangeTransitionStart: function () {
                 let num = this.realIndex > 8 ? (this.realIndex + 1) : `0` + (this.realIndex + 1);
-                document.querySelector('#mainBanner .num').innerHTML = num;
+                document.querySelector('#mainPortfolioAll .num').innerHTML = num;
             }
         }
     })
@@ -259,20 +259,12 @@ function mainSloganTimeLine() {
 }
 
 
-function mainVisualTimeLine() {
+function mainFormTimeLine() {
     const tl = gsap.timeline();
 
     // tl.set({}, {}, "-=2")
-    tl.from('#mainVisual h2', { x: -400, });
-    tl.set({}, {}, "+=1")
-    tl.to('#mainVisual .mockup', { y: -100, });
-    tl.to('#mainVisual.default_section', { '--left': '120rem', });
-    tl.set('.section01 .inner .itm', {
-        background: 'var(--src-img) 0 0, url(./images/soda_mockup.png)',
-        //duration: 10,
-    })
-
-    tl.to('#mainVisual .inner .itm', {
+    tl.to('#mainForm.default_section', { '--left': '120rem', });
+    tl.to('#mainForm .inner .itm', {
         background: 'var(--src-img) -960px 0, url(./images/soda_mockup.png)',
         duration: 4,
     })
@@ -281,7 +273,7 @@ function mainVisualTimeLine() {
 
     ScrollTrigger.create({
         animation: tl,
-        trigger: '#mainVisual',
+        trigger: '#mainForm',
         pin: true,
         scrub: 1,
         start: "center center",

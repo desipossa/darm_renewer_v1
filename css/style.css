@@ -148,7 +148,7 @@ body {
   margin: 0 0 3.2rem 0;
 }
 
-#mainIntro .inner > * {
+#mainIntro .inner .title {
   flex: 1;
 }
 
@@ -156,9 +156,13 @@ body {
   min-width: 0;
 }
 
+#mainIntro .mockup .res_slide {
+  width: 50rem;
+  margin: -10rem 8rem 0 auto;
+}
 #mainIntro .mockup figure {
-  /* margin: 0 -2rem 0 0;
-  padding: 0 2rem 0 0; */
+  /* margin: 0 -2rem; */
+  padding: 0 8rem;
 }
 #mainIntro .mockup img {
   /* filter: grayscale(1); */
@@ -204,52 +208,52 @@ body {
   filter: blur(150px);
 }
 
-.path {
+#mainIntro .path {
   position: absolute;
   top: 0;
   right: 0;
   z-index: 999;
 }
 
-.path svg {
+#mainIntro .path svg {
   position: absolute;
   top: 0;
   right: 0;
 }
 
-.path svg path {
+#mainIntro .path svg path {
   stroke: tomato;
   stroke-dasharray: 5px 10px;
 }
 
-.m {
+#mainIntro .m {
   position: absolute;
   top: -100%;
   left: -100%;
 }
 
-.n img {
+#mainIntro .n img {
   max-width: 150px;
   filter: drop-shadow(-4px -10px 10px rgba(0, 0, 0, 0.4));
 }
 
-.m > div:nth-child(1) .n {
+#mainIntro .m > div:nth-child(1) .n {
   animation: fly 1s infinite;
 }
 
-.m > div:nth-child(2) .n {
+#mainIntro .m > div:nth-child(2) .n {
   animation: fly 2s infinite;
 }
 
-.m > div:nth-child(3) .n {
+#mainIntro .m > div:nth-child(3) .n {
   animation: fly 1.5s infinite;
 }
 
-.m > div:nth-child(4) .n {
+#mainIntro .m > div:nth-child(4) .n {
   animation: fly 2s infinite;
 }
 
-.m > div:nth-child(5) .n {
+#mainIntro .m > div:nth-child(5) .n {
   animation: fly 1.5s infinite;
 }
 
@@ -267,70 +271,200 @@ body {
   }
 }
 
-.mainSlogan .wrap_inner {
+/* 
+
+
+mainPortfolioAll
+
+
+*/
+
+#mainPortfolioAll .title {
+  text-align: right;
+  margin: 0 auto 0 auto;
+  z-index: 1;
+}
+
+#mainPortfolioAll .icon {
+  position: absolute;
+  top: -18rem;
+  left: 50%;
+  font-size: 8rem;
+  font-weight: 900;
+}
+
+#mainPortfolioAll .num {
+  position: absolute;
+  top: 10rem;
+  right: 0;
+  z-index: -1;
+  font-size: 80rem;
+  font-weight: 900;
+
+  color: #fff;
+  text-shadow: 0px 0px 0 rgb(231, 231, 231), 1px 1px 0 rgb(216, 216, 216),
+    2px 2px 0 rgb(202, 202, 202), 3px 3px 0 rgb(187, 187, 187),
+    4px 4px 0 rgb(173, 173, 173), 5px 5px 0 rgb(158, 158, 158),
+    6px 6px 0 rgb(144, 144, 144), 7px 7px 6px rgba(0, 0, 0, 0.6),
+    7px 7px 1px rgba(0, 0, 0, 0.5), 0px 0px 6px rgba(0, 0, 0, 0.2);
+
+  opacity: 0.18;
+  font-style: italic;
+}
+
+#mainPortfolioAll .portfolio .itm h3 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  margin: 0 0 4rem 0;
+}
+
+#mainPortfolioAll .portfolio .itm h3 span {
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin: 0 0 0 2rem;
+}
+
+#mainPortfolioAll .portfolio .itm {
+  position: relative;
+}
+
+#mainPortfolioAll .portfolio .itm .pc {
+  width: 100%;
+}
+
+#mainPortfolioAll .portfolio .itm strong {
+  display: block;
+  margin: 0 0 0.8rem 0;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+#mainPortfolioAll .portfolio .itm .mb {
+  position: absolute;
+  bottom: -8rem;
+  right: -4rem;
+  width: 24rem;
+}
+
+#mainPortfolioAll .portfolio .itm {
+  display: flex;
+  align-items: center;
+  gap: 16rem;
+}
+
+#mainPortfolioAll .portfolio .itm > * {
+  flex: 1;
+}
+
+#mainPortfolioAll .portfolio .itm .mockup {
+  position: relative;
+  order: -1;
+  margin: 0.2rem 1rem 10rem 10rem;
+}
+
+#mainPortfolioAll .portfolio .itm strong::after {
+  content: "";
+  display: block;
+  width: 4rem;
+  height: 1px;
+  background: var(--primary-color);
+  margin: 0.8rem 0;
+}
+
+#mainPortfolioAll .portfolio .itm .ihr {
+  display: block;
+  margin: 2.4rem 0;
+  border: none;
+  border-bottom: 1px solid var(--lightgray-color);
+}
+
+#mainPortfolioAll .portfolio .itm .default_btn {
+  background: var(--darkgray-color);
+  color: var(--lightgray-color);
+  font-size: 1.8rem;
+  box-shadow: inset 2px 2px 8px #111;
+}
+
+/* 
+
+
+mainSloganBanner
+
+
+*/
+
+#mainSloganBanner .mainSlogan .wrap_inner {
   display: flex;
 }
 
-.mainSlogan .wrap_inner .img_box {
+#mainSloganBanner .mainSlogan .wrap_inner .img_box {
   flex: 3;
 }
 
-.mainSlogan .wrap_inner .title {
+#mainSloganBanner .mainSlogan .wrap_inner .title {
   flex: 4;
   color: #fff;
   padding: 10rem 20rem;
   text-align: right;
 }
 
-.mainSlogan .wrap_inner .title h2 {
+#mainSloganBanner .mainSlogan .wrap_inner .title h2 {
   font-size: 8rem;
   font-weight: 900;
   margin: 0 0 0.8rem 0;
   /* -webkit-text-stroke: 1px rgba(0, 0, 0, 0.5); */
 }
-.mainSlogan .wrap_inner .title strong {
+#mainSloganBanner .mainSlogan .wrap_inner .title strong {
   display: block;
   font-size: 3.2rem;
   font-weight: 100;
   margin: 0 0 1.6rem 0;
 }
 
-.ms01 {
+#mainSloganBanner .ms01 {
   background: #519bb8 url(../images/patten04.png);
   /* clip-path: polygon(5% 0%, 95% 0%, 100% 100%, 0% 100%); */
   transform: rotate(-1deg) translate(2rem, 0);
 }
 
-.ms01 .img_box {
+#mainSloganBanner .ms01 .img_box {
   clip-path: polygon(0 0, 95% 0%, 100% 100%, 0% 100%);
   margin: -20px 0 0 0;
 }
 
-.ms02 .img_box {
+#mainSloganBanner .ms02 .img_box {
   clip-path: polygon(5% 0, 100% 0%, 100% 100%, 0% 100%);
   margin: -20px 0 0 0;
 }
-.ms02 {
+#mainSloganBanner .ms02 {
   background: #e9ba2e url(../images/patten04.png);
   transform: rotate(1deg) translate(2rem, -4rem);
 }
 
-.ms03 .inner {
+/* 
+
+
+
+
+
+*/
+
+#mainInfo .ms03 .inner {
   display: flex;
   gap: 3.2rem;
 }
 
-.ms03 .inner > * {
+#mainInfo .ms03 .inner > * {
   flex: 1;
 }
 
-.ms03 .inner h3 {
+#mainInfo .ms03 .inner h3 {
   font-size: 2.4rem;
   font-weight: 600;
   margin: 0 0 1.2rem 0;
 }
 
-.ms03 .inner h3::first-letter {
+#mainInfo .ms03 .inner h3::first-letter {
   background: #333;
   font-size: 4rem;
   font-weight: 900;
@@ -338,7 +472,7 @@ body {
   padding: 1rem;
 }
 
-.ms03 .inner p {
+#mainInfo .ms03 .inner p {
   margin: 0 0 2.4rem 0;
 }
 
@@ -387,21 +521,6 @@ body {
 #mainBanner .ba_slide .swiper-wrapper,
 #mainBanner2 .ba_slide2 .swiper-wrapper {
   transition-timing-function: linear !important;
-}
-
-#mainBanner .num {
-  position: absolute;
-  top: 10rem;
-  right: 0;
-  font-size: 24rem;
-  font-weight: 900;
-
-  color: #fff;
-  text-shadow: 0px 0px 0 rgb(231, 231, 231), 1px 1px 0 rgb(216, 216, 216),
-    2px 2px 0 rgb(202, 202, 202), 3px 3px 0 rgb(187, 187, 187),
-    4px 4px 0 rgb(173, 173, 173), 5px 5px 0 rgb(158, 158, 158),
-    6px 6px 0 rgb(144, 144, 144), 7px 7px 6px rgba(0, 0, 0, 0.6),
-    7px 7px 1px rgba(0, 0, 0, 0.5), 0px 0px 6px rgba(0, 0, 0, 0.2);
 }
 
 /* .swiper-container-free-mode > .swiper-wrapper {
@@ -663,11 +782,11 @@ body {
   outline: 1px solid;
 } */
 
-#mainVisual .inner {
+#mainForm .inner {
   margin: 20rem auto 0 auto;
 }
 
-#mainVisual .inner .itm {
+#mainForm .inner .itm {
   position: relative;
   z-index: 10000;
   width: 30rem;
