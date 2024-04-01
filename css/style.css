@@ -285,6 +285,18 @@ mainPortfolioAll
   z-index: 1;
 }
 
+#mainPortfolioAll .case button {
+  border: 1px solid var(--darkgray-color);
+  padding: 4px 8px;
+  margin: 4px;
+  border-radius: 4px;
+}
+
+#mainPortfolioAll .case button::before {
+  content: "#";
+  margin: 0 4px 0 0;
+}
+
 #mainPortfolioAll .icon {
   position: absolute;
   top: -18rem;
@@ -383,6 +395,13 @@ mainPortfolioAll
   color: var(--lightgray-color);
   font-size: 1.8rem;
   box-shadow: inset 2px 2px 8px #111;
+}
+
+#mainPortfolioAll .swiper-pagination span {
+  width: 20px;
+  height: 20px;
+  background: var(--darkgray-color);
+  border-radius: 1px;
 }
 
 /* 

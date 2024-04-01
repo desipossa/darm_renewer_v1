@@ -170,6 +170,7 @@ function mainPortfolioSlide() {
     const sl = new Swiper('#mainPortfolioAll .portfolio', {
         loop: true,
         speed: 2000,
+        //loopedSlides: 1,
         autoplay: {
             delay: 8000,
             disableOnInteraction: false,
@@ -186,7 +187,37 @@ function mainPortfolioSlide() {
                 document.querySelector('#mainPortfolioAll .num').innerHTML = num;
             }
         }
+    });
+
+
+    const PTA = document.querySelectorAll('#mainPortfolioAll .itm h3');
+    //console.log(PTA);
+    const box = document.createElement('div');
+    box.classList.add('case')
+
+    document.querySelector('#mainPortfolioAll .title').append(box);
+
+    PTA.forEach((it, idx) => {
+        it.querySelector('span').style.display = 'none';
+
+        const itm = document.createElement('button');
+        itm.innerHTML = `    
+    ${it.innerHTML}
+    `
+        box.append(itm);
+    });
+
+
+    const AllItm = document.querySelectorAll('#mainPortfolioAll .case button');
+    console.log(AllItm)
+
+    AllItm.forEach((it, idx) => {
+        it.addEventListener('click', () => {
+            //console.log(idx);
+            sl.slideToLoop(idx)
+        })
     })
+
 }
 
 
